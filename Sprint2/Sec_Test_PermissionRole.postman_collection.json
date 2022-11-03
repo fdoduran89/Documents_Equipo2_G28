@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "10c2064b-21ba-458e-91e2-d93aabd302e7",
+		"name": "Sec_Test_PermissionRole",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24174392"
+	},
+	"item": [
+		{
+			"name": "POST PERMISO-ROLE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZG9kdXJhbiIsInJvbGVzIjpbIkFkbWluaXN0cmFkb3IiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2xvZ2luIiwiZXhwIjoxNjY3MzY4NzY1fQ.Y76AWqHbIgkVnb5y77Yc7AnMfg24zLwT4ihmdNJE2fM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/PermissionRole/roles/635b4279dbaa745a0d4ed272/permissions/636201a0f0c21e709012fa03",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PermissionRole",
+						"roles",
+						"635b4279dbaa745a0d4ed272",
+						"permissions",
+						"636201a0f0c21e709012fa03"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PERMISO-ROLE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZG9kdXJhbiIsInJvbGVzIjpbIkFkbWluaXN0cmFkb3IiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2xvZ2luIiwiZXhwIjoxNjY3MzY4NzY1fQ.Y76AWqHbIgkVnb5y77Yc7AnMfg24zLwT4ihmdNJE2fM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/PermissionRole/6361fe6422c7971bdc121a03",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PermissionRole",
+						"6361fe6422c7971bdc121a03"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PERMISSION-ROLES",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZG9kdXJhbiIsInJvbGVzIjpbIkFkbWluaXN0cmFkb3IiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2xvZ2luIiwiZXhwIjoxNjY3MzY4NzY1fQ.Y76AWqHbIgkVnb5y77Yc7AnMfg24zLwT4ihmdNJE2fM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/PermissionRole",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PermissionRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PERMISSION-ROLE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZG9kdXJhbiIsInJvbGVzIjpbIkFkbWluaXN0cmFkb3IiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2xvZ2luIiwiZXhwIjoxNjY3MzY4NzY1fQ.Y76AWqHbIgkVnb5y77Yc7AnMfg24zLwT4ihmdNJE2fM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/PermissionRole/63620344f0c21e709012fa06",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PermissionRole",
+						"63620344f0c21e709012fa06"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

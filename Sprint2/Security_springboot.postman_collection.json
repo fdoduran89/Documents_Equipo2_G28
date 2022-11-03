@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "db9c1e13-cb68-4398-a018-d1fc3bf56be0",
+		"name": "Security_springboot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24172937"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "fdoduran",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "fdoduran",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "fdoduran",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "fdoduran",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Login"
+			},
+			"response": []
+		},
+		{
+			"name": "POST_users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZG9kdXJhbiIsInJvbGVzIjpbIkFkbWluaXN0cmFkb3IiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2xvZ2luIiwiZXhwIjoxNjY3MjU5NjcwfQ.Vmmm5DmpP6JWH_IiVlacPQpRsfUHrY5dFy0H_KMo420",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"nombres\": \"Fernando Andres\",\r\n    \"apellidos\":\"Duran\",\r\n    \"documento\":\"CC1073602189\",\r\n    \"password\":\"admin\",\r\n    \"email\":\"email89@email.com\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users?roleId=635b4279dbaa745a0d4ed272",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "roleId",
+							"value": "635b4279dbaa745a0d4ed272"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_FIND-ALL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZG9kdXJhbiIsInJvbGVzIjpbIkFkbWluaXN0cmFkb3IiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2xvZ2luIiwiZXhwIjoxNjY3MjU5NjcwfQ.Vmmm5DmpP6JWH_IiVlacPQpRsfUHrY5dFy0H_KMo420",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_roles",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZG9kdXJhbiIsInJvbGVzIjpbIkFkbWluaXN0cmFkb3IiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2xvZ2luIiwiZXhwIjoxNjY3MjU5NjcwfQ.Vmmm5DmpP6JWH_IiVlacPQpRsfUHrY5dFy0H_KMo420",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jurado\",\r\n    \"description\": \"Conteo de votos, cumplimiento normativo\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/roles",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"roles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

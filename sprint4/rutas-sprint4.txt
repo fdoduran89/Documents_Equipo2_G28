@@ -1,3 +1,6 @@
 https://trello.com/b/FOzGcRrL/sprint-4
 
 https://github.com/ycapacho/angular-project
+
+usuario para pruebas: fdoduran
+clave fdoduran

@@ -1,0 +1,621 @@
+{
+	"info": {
+		"_postman_id": "04be4e53-ca29-4b86-bc59-6f12f08654fb",
+		"name": "Springboot_Seguridad_final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7475176"
+	},
+	"item": [
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Crear Role",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var res = pm.response.json();\r",
+									"pm.environment.set('lastRoleId', res.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rol#{{$randomInt}}\",\r\n    \"description\": \"Rol de Prueba\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/roles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver Todos los Roles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/roles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver Rol x Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/roles/6360539aaddca051b4979c1e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles",
+								"6360539aaddca051b4979c1e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Desc del Rol x Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Desc {{$randomLoremText}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/roles/6360539aaddca051b4979c1e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles",
+								"6360539aaddca051b4979c1e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar un Rol x id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/roles/{{lastRoleId}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"roles",
+								"{{lastRoleId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Permisos",
+			"item": [
+				{
+					"name": "Crear Permiso",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var res = pm.response.json();\r",
+									"pm.environment.set('lastPermissionId', res.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"url\": \"/users\",\r\n    \"method\": \"PUT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/permissions",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver Permiso x Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/permissions/6361fd8022c7971bdc121a02",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"permissions",
+								"6361fd8022c7971bdc121a02"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Permiso x Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/permissions/{{lastPermissionId}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"permissions",
+								"{{lastPermissionId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Permiso",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"url\": \"/users\",\r\n    \"method\": \"GET\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/permissions/637bede2dbdb7d43d0192201",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"permissions",
+								"637bede2dbdb7d43d0192201"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver Todos los Permisos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/permissions",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Permisos/Role",
+			"item": [
+				{
+					"name": "Agregar Permiso a un Rol",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var res = pm.response.json();\r",
+									"pm.environment.set('lastPermRole', res.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/permissions-roles/role/635b4279dbaa745a0d4ed272/permission/637bede2dbdb7d43d0192201",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"permissions-roles",
+								"role",
+								"635b4279dbaa745a0d4ed272",
+								"permission",
+								"637bede2dbdb7d43d0192201"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver Permisos de un Rol ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/permissions-roles/role/635b4279dbaa745a0d4ed272",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"permissions-roles",
+								"role",
+								"635b4279dbaa745a0d4ed272"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver Todos los Roles con Permisos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/permissions-roles",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"permissions-roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Permiso de un Rol",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/permissions-roles/{{lastRoleId}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"permissions-roles",
+								"{{lastRoleId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Crear Usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"ycapacho\",\r\n    \"nombres\": \"Yaneth\",\r\n    \"apellidos\":\"Capacho\",\r\n    \"documento\":\"CC11111111\",\r\n    \"password\":\"ycapacho\",\r\n    \"email\":\"ycapacho@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users?roleId=635b4279dbaa745a0d4ed272",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "roleId",
+									"value": "635b4279dbaa745a0d4ed272"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver Todos los Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{credenciales}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var res = pm.response.json();\r",
+									"pm.environment.set('credenciales', res.access_token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "username",
+								"value": "fdoduran",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "password",
+								"value": "fdoduran",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"fdoduran\",\r\n    \"password\": \"fdoduran\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						},
+						"description": "Login"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

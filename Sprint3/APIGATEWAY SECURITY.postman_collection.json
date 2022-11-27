@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "76e681f0-e88e-40ba-a62f-5463d8ad6c28",
+		"name": "APIGATEWAY SECURITY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24172937"
+	},
+	"item": [
+		{
+			"name": "POST ALL USERS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZG9kdXJhbiIsInJvbGVzIjpbIkFkbWluaXN0cmFkb3IiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2xvZ2luIiwiZXhwIjoxNjY5MTcxNTYyfQ.00kehpOdTCTzigZjFdhvQWAq6c9uwarAw7lu2B3Avtg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"prueba\",\r\n    \"nombres\": \"prueba usuario\",\r\n    \"apellidos\":\"Prueba apellidos\",\r\n    \"documento\":\"CC123456780\",\r\n    \"password\":\"prueba\",\r\n    \"email\":\"yprueba2@email.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/users",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USERS BY_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZG9kdXJhbiIsInJvbGVzIjpbIkFkbWluaXN0cmFkb3IiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2xvZ2luIiwiZXhwIjoxNjY5MTcxNTYyfQ.00kehpOdTCTzigZjFdhvQWAq6c9uwarAw7lu2B3Avtg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/users/635b5e45fedabd55f972c065",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"users",
+						"635b5e45fedabd55f972c065"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

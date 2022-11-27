@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "4736f463-bff2-454a-b514-24d717783aac",
+		"name": "APIGATEWAY FER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7475176"
+	},
+	"item": [
+		{
+			"name": "GET MESA AG",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/regisNal",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"regisNal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PARTIDO AG",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5001/regisNalP",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"regisNalP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE MESA AG",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/regisNal/635ecbddb2b57235088479af",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"regisNal",
+						"635ecbddb2b57235088479af"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT PARTIDO AG",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_partido\": \"PRUEBA-PARTIDO\",\r\n    \"lema_partido\": \"El nuevo lema\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/regisNalP/PRUEBA-PARTIDO",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"regisNalP",
+						"PRUEBA-PARTIDO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST PARTIDO AG",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_partido\": \"PRUEBA-PARTIDO\",\r\n    \"lema_partido\": \"Prueba Lema\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/regisNalP",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"regisNalP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PARTIDO AG",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/regisNalP/PRUEBA-PARTIDO",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"regisNalP",
+						"PRUEBA-PARTIDO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST MESA AG",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nmesa\": 256,\r\n    \"Ncedulas\":1250\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/regisNal",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"regisNal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CANDIDATO AG",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/regisNalC",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"regisNalC"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST CANDIDATO AG",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numberCedula\": \"741852963\",\r\n    \"numberResolucion\": \"1526\",\r\n    \"nameCandidato\": \"Pepito\",\r\n    \"apellidoCandidato\": \"Perez Perez\",\r\n    \"id_partido\": \"63719edf2d19b5891a1ca4ae\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/regisNalC",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"regisNalC"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE CANDIDATO AG",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/regisNalC/6372e67f7508e3bff6a590bc",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"regisNalC",
+						"6372e67f7508e3bff6a590bc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
